@@ -1,4 +1,1 @@
-homepage
-========
-
 Personal website
