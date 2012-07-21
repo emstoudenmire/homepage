@@ -18,7 +18,7 @@ if(IsInjected($email))
 
 $from = 'info@mutation-media.com';// change the email address
     
-$to = "gh1036@gmail.com";// change the email address
+$to = "miles.stoudenmire@gmail.com";// change the email address
 $headers = "From: $from \r\n";
 $headers .= "Reply-To: $email \r\n";
 //Send the email!

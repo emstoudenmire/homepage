@@ -42,7 +42,7 @@ body{
 	line-height:20px;
 	font-weight:normal;
 	font-style:normal;
-	color:#555;
+	color:#444;
 }
 
 #wrapper{
@@ -355,11 +355,12 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 }
 
 
-#skills, #introduction, #experience{
+#skills, #introduction, #experience, #education
+    {
 	padding-bottom:10px;
 	margin-bottom:10px;
 	border-bottom:1px dotted #e3e2e2;
-}
+    }
 
 #experience ul li
     {
@@ -367,9 +368,6 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
     margin-left:30px;
     }
 
-#education{
-	margin-bottom:20px;
-}
 
 #education .years
     {
@@ -393,7 +391,36 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
     margin-bottom:10px;
     }
 
+#publications
+    {
+	margin-bottom:20px;
+    }
 
+#publications .year
+    {
+    float:left;
+    font-size:12px;
+    color:#333;
+    font-weight:bold;
+    font-style:italic;
+    margin-right:8px;
+    }
+
+#publications .paper
+    {
+    font-size:12px;
+    color:#000;
+    padding-left:40px;
+    margin-bottom:5px;
+    }
+
+#publications .title
+    {
+    font-size:12px;
+    color:#666;
+    font-weight:bold;
+    font-style:italic;
+    }
 
 
 #skills1, #skills2 {
