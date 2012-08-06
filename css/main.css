@@ -116,7 +116,8 @@ header{
 }
 
 #mainNav li a.tab-blog{
-	background-image: url(../images/blog-ico.png);
+	/*background-image: url(../images/blog-ico.png);*/
+	background-image: url(../images/projects-ico.png);
 	background-position: 14px 7px;
 
 }
@@ -150,7 +151,8 @@ header{
 }
 
 #mainNav li.active .tab-blog{
-	background-image: url(../images/blog-ico-active.png);
+	/*background-image: url(../images/blog-ico-active.png);*/
+	background-image: url(../images/projects-ico-active.png);
 	background-position: 14px 7px;
 	color:#CD5353;
 	
