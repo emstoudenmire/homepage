@@ -1,7 +1,9 @@
 <?php
-$name = $_POST['name'];
+$name = "Email From ";
+$name .= $_POST['name'];
 $email = $_POST['email'];
-$message = $_POST['message'];
+$message = "Reply To: $email \r\n\n\n";
+$message .= $_POST['message'];
 
 //Validate first
 if(empty($name)||empty($email)) 
@@ -16,13 +18,16 @@ if(IsInjected($email))
     header('Location: second.html');
 }
 
-$from = 'info@mutation-media.com';// change the email address
+$from = 'miles@itensor.org';// change the email address
     
 $to = "miles.stoudenmire@gmail.com";// change the email address
 $headers = "From: $from \r\n";
 $headers .= "Reply-To: $email \r\n";
 //Send the email!
-mail($to,$name,$email,$message,$headers);
+
+//mail($to,$name,$email,$message,$headers);
+mail($to,$name,$message,$headers);
+
 //done. redirect to the index page
 header('Location: index.html');
 
