@@ -1174,6 +1174,12 @@ blockquote.style3{
 	margin-left:28px;
 }
 
+#contact .formlabel
+    {
+    font-size:12px;
+    color:#666;
+    }
+
 #personalInfo, #mapHolder{
 	margin-bottom:10px;
 	padding-bottom:12px;
