@@ -168,7 +168,7 @@ header{
 
 /* End main navigation */
 #img{
-	margin-left:12px;
+	margin-left:14px;
 	margin-bottom:54px;
 	position:relative;
 	
@@ -294,7 +294,7 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 
 #about
     {
-	font-size:12px;
+	font-size:14px;
 	width:478px;
     }
 
@@ -310,7 +310,7 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 	-o-border-radius:4px;
 	-webkit-border-radius:4px;
     color: #666666;
-    font-size: 11px;
+    font-size: 14px;
   	margin-bottom: 10px;
 	margin-top: 9px;
 	padding: 6px 44px 5px 10px;
@@ -343,14 +343,14 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 
 
 #about h4{
-	font-size:12px;
+	font-size:14px;
 	color:#666;
 	font-weight:bold;
 
 }
 
 #about h6{
-	font-size:12px;
+	font-size:14px;
 	color:#333;
 	font-weight:bold;
 	font-style:italic;
@@ -373,7 +373,7 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 
 #education .years
     {
-    font-size:12px;
+    font-size:14px;
     color:#333;
     font-weight:bold;
     font-style:italic;
@@ -382,7 +382,7 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 
 #education .degree
     {
-    font-size:12px;
+    font-size:14px;
     color:#666;
     font-weight:bold;
     font-style:italic;
@@ -401,7 +401,7 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 #publications .year
     {
     float:left;
-    font-size:12px;
+    font-size:14px;
     color:#333;
     font-weight:bold;
     font-style:italic;
@@ -410,7 +410,7 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 
 #publications .paper
     {
-    font-size:12px;
+    font-size:14px;
     color:#000;
     padding-left:40px;
     margin-bottom:5px;
@@ -418,7 +418,7 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 
 #publications .title
     {
-    font-size:12px;
+    font-size:14px;
     color:#666;
     font-weight:bold;
     font-style:italic;
@@ -442,7 +442,7 @@ ul#socials  li.vm:hover{background: url(../images/social-sprite.png) no-repeat -
 
 #skills  li {
 	color:#666;
-	font-size:12px;
+	font-size:14px;
 	font-weight:bold;
 	padding-bottom:3px;
 	float:left;
@@ -481,7 +481,7 @@ a.vcardButton {
 	-moz-border-radius:3px;
 	-o-border-radius:3px;
 	-webkit-border-radius:3px;
-	font-size:12px;
+	font-size:14px;
 	color:#ffffff;
 	background-image: url(../images/bg-button.png);
 	background-position: 0 0;
@@ -524,7 +524,7 @@ a.vcardButton:hover{
 
 #portfolio p, ul{
 
-	font-size:12px;
+	font-size:14px;
 
 }
 
@@ -686,7 +686,7 @@ li.item h3 span{
 
 #blog .blogPost h4
     {
-    font-size:12px;
+    font-size:14px;
 	font-weight:bold;
 	color:#555555;
     }
@@ -749,7 +749,7 @@ ul.blogInfo-no-image li{
 
 #blog p
     {
-	font-size:12px;
+	font-size:14px;
 	margin-bottom:10px;
     }
 
@@ -762,7 +762,7 @@ blockquote ~ p {
 
 blockquote.style1{
 	margin-bottom:20px;
-	font-size:12px;
+	font-size:14px;
 	font-style:italic;
 	background: url(../images/quote.png) repeat-y 0 0;
 	display:block;
@@ -771,7 +771,7 @@ blockquote.style1{
 
 blockquote.style2{
 	margin-bottom:20px;
-	font-size:12px;
+	font-size:14px;
 	font-style:italic;
 	border-left:5px solid #555;
 	display:block;
@@ -781,7 +781,7 @@ blockquote.style2{
 
 blockquote.style3{
 	margin-bottom:20px;
-	font-size:12px;
+	font-size:14px;
 	font-style:italic;
 	border-right:5px solid #CD5353;
 	display:block;
@@ -800,7 +800,7 @@ blockquote.style3{
 	-moz-border-radius:3px;
 	-o-border-radius:3px;
 	-webkit-border-radius:3px;
-	font-size:12px;
+	font-size:14px;
 	color:#ffffff;
 	background-image: url(../images/bg-button.png);
 	background-position: 0 0;
@@ -894,7 +894,7 @@ blockquote.style3{
 
 .comments a {
  	color:#999999;
-	font-size:12px;
+	font-size:14px;
 }
 
 .comments .replys {
@@ -911,7 +911,7 @@ blockquote.style3{
 	-o-border-radius:3px;
 	-webkit-border-radius:3px;
 	border:1px solid #777;
-	font-size:12px;
+	font-size:14px;
 	color:#ffffff;
 	margin-top:3px;
 	background-image: url(../images/bg-button.png);
@@ -952,7 +952,7 @@ blockquote.style3{
 	-moz-border-radius:3px;
 	-o-border-radius:3px;
 	-webkit-border-radius:3px;
-	font-size:12px;
+	font-size:14px;
 	color:#ffffff;
 	background-image: url(../images/bg-button.png);
 	background-position: 0 0;
@@ -1052,7 +1052,7 @@ blockquote.style3{
 	-moz-border-radius:3px;
 	-o-border-radius:3px;
 	-webkit-border-radius:3px;
-	font-size:12px;
+	font-size:14px;
 	color:#ffffff;
 	cursor:pointer;
 	background-image: url(../images/bg-button.png);
@@ -1098,7 +1098,7 @@ blockquote.style3{
     
 }
 
-#pagination #prev, #pagination #next {font-size:12px;}
+#pagination #prev, #pagination #next {font-size:14px;}
 #pagination #prev a, #pagination #next a, #pagination li a{
 	color:#777777;
 	-moz-transition: all 0.4s ease-in-out;
@@ -1149,21 +1149,21 @@ blockquote.style3{
 
 #contact h4 {
     color: #666;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 	margin-bottom:10px;
 }
 
 
 #map{
-	height:200px;
+	height:300px;
 	border: 1px solid #e3e2e2;
 }
 
 #contact p.personal{
-	font-size:12px;
-	width:170px;
-	margin-right:22px;
+	font-size:14px;
+	width:200px;
+	margin-right:14px;
 }
 
 #contact p.personal, #contact ul.personal{
@@ -1176,13 +1176,13 @@ blockquote.style3{
 
 #contact .formlabel
     {
-    font-size:12px;
+    font-size:14px;
     color:#666;
     }
 
 #personalInfo, #mapHolder{
 	margin-bottom:10px;
-	padding-bottom:12px;
+	padding-bottom:14px;
 	border-bottom:1px dotted #e3e2e2;
 
 }
