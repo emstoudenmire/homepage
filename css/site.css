@@ -1,0 +1,76 @@
+/* ===== Global Theme ===== */
+:root {
+  --bulma-primary-h: 217;
+  --bulma-primary-s: 71%;
+  --bulma-primary-l: 45%;
+
+  --bulma-link-h: 217;
+  --bulma-link-s: 71%;
+  --bulma-link-l: 45%;
+
+  --bulma-family-primary: "Atkinson Hyperlegible Next", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+}
+
+/* ===== Navbar ===== */
+.navbar.is-dark {
+  background-color: #2c3e50;
+}
+
+/* ===== Profile photo ===== */
+.profile-photo {
+  width: 200px;
+  height: 200px;
+}
+.profile-photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===== Hero / intro section ===== */
+.hero.has-background-light {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== Publication list ===== */
+.pub-list {
+  max-width: 52rem;
+}
+
+.pub-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+.pub-item:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem !important;
+}
+
+.pub-authors {
+  color: #555;
+  margin-bottom: 0.1rem !important;
+}
+
+.pub-journal {
+  margin-bottom: 0.1rem !important;
+}
+
+.pub-links a {
+  font-size: 0.9rem;
+}
+
+/* ===== Boxes ===== */
+.box {
+  height: 100%;
+}
+
+/* ===== Footer ===== */
+.footer {
+  padding: 2rem 1.5rem;
+}

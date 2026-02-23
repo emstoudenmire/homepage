@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Getting Started with ITensor in Julia - Miles Stoudenmire</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/site.css">
+  </head>
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-weight-bold" href="/">
+            Miles Stoudenmire
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="mainNav" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="/">Home</a>
+            <a class="navbar-item" href="/faq.html">FAQ</a>
+            <a class="navbar-item" href="/blog/">Blog</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== BLOG POST ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="/blog/">Blog</a></li>
+                <li class="is-active"><a href="#" aria-current="page">Getting Started with ITensor</a></li>
+              </ul>
+            </nav>
+
+            <div class="content">
+              <h1 class="title is-2">Getting Started with ITensor in Julia</h1>
+              <p class="has-text-grey">
+                <span class="icon-text">
+                  <span class="icon"><i class="far fa-calendar"></i></span>
+                  <span>January 15, 2025</span>
+                </span>
+              </p>
+
+              <p>
+                If you're interested in tensor network methods but haven't tried
+                coding them up, ITensor makes it surprisingly easy to get started.
+                In this post I'll walk through installing the Julia version and
+                running a basic DMRG calculation.
+              </p>
+
+              <h2>Installing ITensors.jl</h2>
+              <p>
+                First, make sure you have Julia installed (version 1.6 or later).
+                Then open a Julia REPL and type:
+              </p>
+              <pre><code>using Pkg
+Pkg.add("ITensors")</code></pre>
+              <p>That's it. Julia's package manager handles all the dependencies.</p>
+
+              <h2>A first DMRG calculation</h2>
+              <p>
+                Let's find the ground state of a spin-1/2 Heisenberg chain.
+                The Hamiltonian is:
+              </p>
+              <p style="text-align:center;">
+                <em>H = &sum;<sub>i</sub> <strong>S</strong><sub>i</sub> &middot; <strong>S</strong><sub>i+1</sub></em>
+              </p>
+              <p>
+                In ITensor, we build this as a matrix product operator (MPO)
+                using the <code>OpSum</code> system:
+              </p>
+              <pre><code>using ITensors
+
+N = 20
+sites = siteinds("S=1/2", N)
+
+os = OpSum()
+for j in 1:(N - 1)
+    os += "Sz", j, "Sz", j + 1
+    os += 0.5, "S+", j, "S-", j + 1
+    os += 0.5, "S-", j, "S+", j + 1
+end
+H = MPO(os, sites)
+
+psi0 = random_mps(sites; linkdims=10)
+sweeps = Sweeps(5)
+setmaxdim!(sweeps, 10, 20, 100)
+setcutoff!(sweeps, 1e-10)
+
+energy, psi = dmrg(H, psi0, sweeps)
+
+println("Ground state energy = ", energy)</code></pre>
+
+              <p>
+                This should converge to an energy per site close to the exact
+                Bethe ansatz result of about &minus;0.4432 for large systems.
+                The key idea is that ITensor's named-index system handles all
+                the bookkeeping of tensor contractions for you&mdash;you just
+                specify the physics.
+              </p>
+
+              <h2>Next steps</h2>
+              <p>
+                From here you can explore measuring local observables,
+                computing entanglement entropy, or trying different models.
+                The <a href="https://itensor.github.io/ITensors.jl/stable/">ITensors.jl documentation</a>
+                has many more examples and tutorials.
+              </p>
+
+              <hr>
+              <p><a href="/blog/">&larr; Back to Blog</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container has-text-centered">
+        <p>&copy; 2025 Miles Stoudenmire</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const burgers = document.querySelectorAll('.navbar-burger');
+        burgers.forEach(burger => {
+          burger.addEventListener('click', () => {
+            const target = document.getElementById(burger.dataset.target);
+            burger.classList.toggle('is-active');
+            target.classList.toggle('is-active');
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

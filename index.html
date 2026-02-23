@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Miles Stoudenmire</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Bulma from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom overrides (after Bulma) -->
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-weight-bold" href="/">
+            Miles Stoudenmire
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="mainNav" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#research">Research</a>
+            <a class="navbar-item" href="#publications">Publications</a>
+            <a class="navbar-item" href="#software">Software</a>
+            <a class="navbar-item" href="#contact">Contact</a>
+            <a class="navbar-item" href="faq.html">FAQ</a>
+            <a class="navbar-item" href="blog/">Blog</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO / INTRO ===== -->
+    <section class="hero is-medium has-background-light">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-narrow">
+              <figure class="image profile-photo">
+                <img class="is-rounded" src="images/miles_photo.jpg"
+                     alt="Miles Stoudenmire">
+              </figure>
+            </div>
+            <div class="column">
+              <h1 class="title is-2">Miles Stoudenmire</h1>
+              <h2 class="subtitle is-4 has-text-grey">
+                Research Scientist
+              </h2>
+              <p class="is-size-5 mb-4">
+                <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/">
+                  Center for Computational Quantum Physics</a>,
+                <a href="https://www.simonsfoundation.org/flatiron/">Flatiron Institute</a>
+              </p>
+              <div class="buttons">
+                <a class="button is-link is-outlined" href="files/emstoudenmire_cv.pdf">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Curriculum Vitae</span>
+                </a>
+                <a class="button is-dark is-outlined" href="https://scholar.google.com/citations?user=DLFxevAAAAAJ&hl=en">
+                  <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                  <span>Google Scholar</span>
+                </a>
+                <a class="button is-dark is-outlined" href="mailto:mstoudenmire@flatironinstitute.org">
+                  <span class="icon"><i class="fas fa-envelope"></i></span>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT / RESEARCH ===== -->
+    <section id="research" class="section">
+      <div class="container content">
+        <h2 class="title is-3">Research</h2>
+        <p>
+          I develop and apply tensor network computational methods, particularly
+          for quantum many-body systems. Tensor networks represent high-order tensors
+          through contracted networks of lower-order tensors, enabling exponential
+          parameter reduction while preserving accuracy. Applications span quantum
+          wavefunctions, classical statistical mechanics, and machine learning.
+        </p>
+        <div class="columns is-multiline mt-4">
+          <div class="column is-half">
+            <div class="box">
+              <h4 class="title is-5 mb-2">Tensor Networks &amp; DMRG</h4>
+              <p>Matrix product states, density matrix renormalization group,
+                and extensions to two-dimensional, dynamical, and finite-temperature systems.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box">
+              <h4 class="title is-5 mb-2">Quantum Many-Body Physics</h4>
+              <p>Quantum many-body systems, especially strongly correlated 
+                 electron systems.
+              </p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box">
+              <h4 class="title is-5 mb-2">Machine Learning</h4>
+              <p>Tensor network algorithms for learning, connections between
+                quantum physics and machine learning models.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box">
+              <h4 class="title is-5 mb-2">Scientific Software</h4>
+              <p>Design and development of the
+                <a href="https://itensor.org">ITensor</a> library for tensor
+                network computations in Julia and C++.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SELECTED PUBLICATIONS ===== -->
+    <section id="publications" class="section has-background-light">
+      <div class="container content">
+        <h2 class="title is-3">Selected Articles</h2>
+
+        <div class="pub-list">
+
+          <article class="pub-item">
+            <p class="pub-title">Supervised Learning with Quantum-Inspired Tensor Networks</p>
+            <p class="pub-authors">E.M. Stoudenmire &amp; David J. Schwab</p>
+            <p class="pub-journal"><em>Advances in Neural Information Processing Systems</em> 29 (2016)</p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/1605.05775">arXiv:1605.05775</a>
+            </p>
+          </article>
+
+          <article class="pub-item">
+            <p class="pub-title">Assembling Fibonacci Anyons From a Z<sub>3</sub> Parafermion Lattice Model</p>
+            <p class="pub-authors">E.M. Stoudenmire, David J. Clarke, Roger S.K. Mong, &amp; Jason Alicea</p>
+            <p class="pub-journal"><em>Phys. Rev. B</em> <strong>91</strong>, 235112 (2015)
+              &mdash; <span class="tag is-info is-light">Editor's Suggestion</span></p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/1501.05305">arXiv:1501.05305</a>
+            </p>
+          </article>
+
+          <article class="pub-item">
+            <p class="pub-title">Real-Space Parallel Density Matrix Renormalization Group</p>
+            <p class="pub-authors">E.M. Stoudenmire &amp; Steven R. White</p>
+            <p class="pub-journal"><em>Phys. Rev. B</em> <strong>87</strong>, 115137 (2013)</p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/1301.3494">arXiv:1301.3494</a>
+            </p>
+          </article>
+
+          <article class="pub-item">
+            <p class="pub-title">Minimally Entangled Typical Thermal State Algorithms</p>
+            <p class="pub-authors">E.M. Stoudenmire &amp; Steven R. White</p>
+            <p class="pub-journal"><em>New J. Phys.</em> <strong>12</strong>, 055026 (2010)</p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/1002.1305">arXiv:1002.1305</a>
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOFTWARE ===== -->
+    <section id="software" class="section">
+      <div class="container content">
+        <h2 class="title is-3">Software</h2>
+        <div class="columns">
+          <div class="column is-two-thirds">
+            <h4 class="title is-4">
+              <a href="https://itensor.org">ITensor</a>
+            </h4>
+            <p>
+              ITensor is an open-source library for tensor network calculations.
+              It provides a high-level interface inspired by tensor diagram notation,
+              making it easy to develop and run algorithms such as DMRG, TDVP, and TEBD.
+              Available in both <a href="https://github.com/ITensor/ITensors.jl">Julia</a>
+              and <a href="https://github.com/ITensor/ITensor">C++</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NOTES / TEACHING ===== -->
+    <section class="section has-background-light">
+      <div class="container content">
+        <h2 class="title is-3">Lecture Notes</h2>
+        <ul>
+          <li>
+            <a href="files/Stoudenmire_MPS_DMRG.pdf">Matrix Product States and DMRG</a>
+            &mdash; introductory notes on MPS and the DMRG algorithm.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <div class="container content">
+        <h2 class="title is-3">Contact</h2>
+        <div class="columns">
+          <div class="column is-half">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:mstoudenmire@flatironinstitute.org">mstoudenmire@flatironinstitute.org</a>
+            </p>
+            <p>
+              <strong>Address:</strong><br>
+              Flatiron Institute<br>
+              Center for Computational Quantum Physics<br>
+              162 Fifth Avenue<br>
+              New York, NY 10010
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container has-text-centered">
+        <p>
+          &copy; 2026 Miles Stoudenmire
+        </p>
+      </div>
+    </footer>
+
+    <!-- Navbar burger toggle script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const burgers = document.querySelectorAll('.navbar-burger');
+        burgers.forEach(burger => {
+          burger.addEventListener('click', () => {
+            const target = document.getElementById(burger.dataset.target);
+            burger.classList.toggle('is-active');
+            target.classList.toggle('is-active');
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

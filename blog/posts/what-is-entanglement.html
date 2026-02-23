@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>What Is Entanglement, Anyway? - Miles Stoudenmire</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/site.css">
+  </head>
+  <body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-weight-bold" href="/">
+            Miles Stoudenmire
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="mainNav" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="/">Home</a>
+            <a class="navbar-item" href="/faq.html">FAQ</a>
+            <a class="navbar-item" href="/blog/">Blog</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="/blog/">Blog</a></li>
+                <li class="is-active"><a href="#" aria-current="page">What Is Entanglement?</a></li>
+              </ul>
+            </nav>
+
+            <div class="content">
+              <h1 class="title is-2">What Is Entanglement, Anyway?</h1>
+              <p class="has-text-grey">
+                <span class="icon-text">
+                  <span class="icon"><i class="far fa-calendar"></i></span>
+                  <span>October 20, 2024</span>
+                </span>
+              </p>
+
+              <p>
+                "Spooky action at a distance." Einstein's famous phrase has
+                done more to confuse people about entanglement than almost
+                anything else. In this post I want to give a clearer picture
+                of what entanglement actually is, why it matters, and how it
+                connects to tensor networks.
+              </p>
+
+              <h2>Entanglement is about correlations</h2>
+              <p>
+                At its core, entanglement is a statement about correlations
+                between parts of a quantum system. If you have two particles
+                in an entangled state, then measuring one particle gives you
+                information about what you'll find when you measure the other.
+                That much is true of classical correlations too&mdash;if I put
+                one red ball and one blue ball in two boxes, opening one box
+                tells me what's in the other.
+              </p>
+              <p>
+                What makes quantum entanglement special is that the
+                correlations are stronger than anything possible in a
+                classical system. This was formalized by John Bell in 1964,
+                and has since been confirmed experimentally many times.
+              </p>
+
+              <h2>Why it matters for tensor networks</h2>
+              <p>
+                The amount of entanglement in a quantum state directly
+                controls how efficiently that state can be represented as a
+                tensor network. A state with little entanglement (following
+                an "area law") can be well-approximated by a matrix product
+                state with modest bond dimension. A state with a lot of
+                entanglement requires exponentially large bond dimensions and
+                can't be efficiently represented this way.
+              </p>
+              <p>
+                This is why DMRG works so well for ground states of
+                one-dimensional systems: these states typically obey an area
+                law, meaning their entanglement is bounded regardless of
+                system size. It's also why simulating highly entangled states
+                (like those produced by a quantum computer running a deep
+                circuit) is so hard classically.
+              </p>
+
+              <h2>Entanglement as a resource</h2>
+              <p>
+                In quantum information theory, entanglement is treated as a
+                resource that enables tasks like quantum teleportation and
+                superdense coding. From the tensor network perspective, the
+                entanglement structure of a state tells you which tensor
+                network geometry is most appropriate for representing it.
+                Understanding entanglement is really the key to understanding
+                when and why tensor network methods succeed.
+              </p>
+
+              <hr>
+              <p><a href="/blog/">&larr; Back to Blog</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container has-text-centered">
+        <p>&copy; 2025 Miles Stoudenmire</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const burgers = document.querySelectorAll('.navbar-burger');
+        burgers.forEach(burger => {
+          burger.addEventListener('click', () => {
+            const target = document.getElementById(burger.dataset.target);
+            burger.classList.toggle('is-active');
+            target.classList.toggle('is-active');
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

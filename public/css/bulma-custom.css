@@ -1,0 +1,22 @@
+/* Error: Undefined function.
+ *     ,
+ * 108 |     "red": color.channel($color, "red", $space: rgb),
+ *     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   bulma/sass/utilities/functions.scss 108:12         bulmaColorLuminance()
+ *   bulma/sass/utilities/functions.scss 137:7          bulmaFindColorInvert()
+ *   bulma/sass/utilities/derived-variables.scss 16:15  @forward
+ *   bulma/sass/utilities/_index.scss 6:1               @forward
+ *   bulma/sass/_index.scss 1:1                         @use
+ *   src/bulma-custom.scss 12:1                         root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined function.\a     \2577 \a 108 \2502      "red": color.channel($color, "red", $space: rgb),\a     \2502             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   bulma/sass/utilities/functions.scss 108:12         bulmaColorLuminance()\a   bulma/sass/utilities/functions.scss 137:7          bulmaFindColorInvert()\a   bulma/sass/utilities/derived-variables.scss 16:15  @forward\a   bulma/sass/utilities/_index.scss 6:1               @forward\a   bulma/sass/_index.scss 1:1                         @use\a   src/bulma-custom.scss 12:1                         root stylesheet';
+}

@@ -1,0 +1,12 @@
+/* 1) Set your Bulma Sass variables FIRST (examples) */
+$primary: #6d28d9;
+$link: #2563eb;
+
+/* If you want to force light styling choices, set Bulma's scheme vars here too
+   (exact vars differ by Bulma version; see Bulma's "Customize with Sass") */
+$scheme-main: #ffffff;
+$scheme-main-bis: #f5f5f5;
+$text: #1f2937;
+
+/* 2) Import Bulma AFTER your overrides */
+@use "../bulma/sass" as *;
