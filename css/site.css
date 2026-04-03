@@ -70,6 +70,11 @@
   height: 100%;
 }
 
+/* ===== FAQ Q&A indentation ===== */
+.faq-item > .container {
+  padding-left: 2.5rem;
+}
+
 /* ===== Footer ===== */
 .footer {
   padding: 2rem 1.5rem;
